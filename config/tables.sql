@@ -6,8 +6,6 @@ CREATE TABLE "public.url" (
 	"views" integer NOT NULL DEFAULT '0',
 	"url" TEXT NOT NULL,
 	CONSTRAINT "url_pk" PRIMARY KEY ("id")
-) WITH (
-  OIDS=FALSE
 );
 
 
@@ -19,8 +17,6 @@ CREATE TABLE "public.user" (
 	"name" serial NOT NULL,
 	"createdAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT 'NOW()',
 	CONSTRAINT "user_pk" PRIMARY KEY ("id")
-) WITH (
-  OIDS=FALSE
 );
 
 
@@ -31,6 +27,4 @@ CREATE TABLE "public.sessions" (
 	"userId" integer NOT NULL,
 	"token" TEXT NOT NULL UNIQUE,
 	CONSTRAINT "sessions_pk" PRIMARY KEY ("id")
-) WITH (
-  OIDS=FALSE
 );
