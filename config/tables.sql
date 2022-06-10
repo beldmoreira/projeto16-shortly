@@ -1,4 +1,4 @@
-CREATE TABLE "public.url" (
+CREATE TABLE "urls" (
 	"id" serial NOT NULL,
 	"createdAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT 'NOW()',
 	"userId" integer NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE "public.url" (
 
 
 
-CREATE TABLE "public.user" (
+CREATE TABLE "users" (
 	"id" serial NOT NULL,
 	"email" serial NOT NULL,
 	"password" serial NOT NULL UNIQUE,
@@ -21,7 +21,7 @@ CREATE TABLE "public.user" (
 
 
 
-CREATE TABLE "public.sessions" (
+CREATE TABLE "sessions" (
 	"id" serial NOT NULL,
 	"createdAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT 'NOW()',
 	"userId" integer NOT NULL,
